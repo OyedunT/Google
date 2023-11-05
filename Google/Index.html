@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        body, html, form, input{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f2f2f2;
+        }
+        nav{
+        /* border: 2px solid red; */
+        height: 60px;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 200px;
+        /* border: 2px solid black; */
+        margin-left: 1100px;
+        
+    }
+    li a{
+        text-decoration:none ;
+        
+    }
+    li{
+        
+        list-style: none;
+    }
+    li:hover{
+        text-decoration: underline;
+    }
+    .icon{
+        /* display: none; */
+        cursor: pointer;
+        margin-right: 50px;
+    }
+    .side_nav{
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 0;
+        height: 500px;
+        cursor: pointer;
+        transition: .5s ease all;
+        display: grid;
+        justify-content: left;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: rgb(44, 42, 42);
+        border-radius: 10px;
+        box-shadow: 0 2px 2px rgba(2, 0, 2, 2);
+        color: #fff;
+    }
+    .side_nav li{
+        margin: 10px;
+    }
+    .side_nav li:hover{
+        text-decoration: none;
+    }
+    .text{
+        display: none;
+    }
+    div:hover.text{
+        display: flex;
+    }
+        #search-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            padding: 20px;
+            /* border: 2px solid red; */
+            
+        }
+        #google-container{
+            /* border: 2px solid black; */
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+        }
+
+        #search-form{
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+          border-radius: 24px;
+          background-color: #fff;
+        }
+        #search-input{
+            flex: 1;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            outline: none;
+            cursor: pointer;
+        }
+        img{
+            margin: 10px;
+            padding: 5px;
+        }
+        .Apps-container{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          justify-content: space-between;
+          align-items: center;
+          height: 230px;
+          width: 400px;
+          margin-left: 500px;
+          margin-top: -25px;
+          /* border: 2px solid red; */
+        }
+        .icons{
+            height: 70px;
+            width: 100px;
+            justify-content: center;
+            display: flex;
+            background-color: black;
+        }
+        .icons:hover{
+            background-color: grey;
+            border-radius: 1000px;
+
+        } 
+        .icon1{
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            background-color: rgb(44, 42, 42);
+        }
+        .card{
+           
+            width: 100px;
+            height: 100px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .card:hover{
+            background-color: grey;
+            color: #fff;
+        }
+       .container{
+        font-size: 10px;
+       }
+       .Apps{
+            width: 100px;
+            height: 150px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+       .container2{
+        font-size: 10px;
+       }
+        
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Gmail</li>
+            <li>images</li>
+        </ul>
+        
+        <div class="icon" onclick="showSideNav()"> 
+                &#9776;
+          </div> 
+<div class="side_nav" id="side_nav">
+    <div class="Apps">
+        <li><img src="./images/Ads.png" alt=""></li>
+        <div class="container2">
+          <h3>Google Ads</h3>
+        </div>
+      </div>
+           
+      <div class="Apps">
+        <li><img src="./images/google.png" alt=""></li> 
+        <div class="container2">
+          <h3>Search</h3>
+        </div>
+      </div>
+    
+      <div class="Apps">
+        <li><img src="./images/gmail.png" alt=""> </li>
+        <div class="container2">
+          <h3>Gmail</h3>
+        </div>
+      </div>
+      
+      <div class="Apps">
+        <li><img src="./images/meet.png" alt=""></li>
+        <div class="container2">
+          <h3>Meet</h3>
+        </div>
+      </div>
+            
+      <div class="Apps">
+        <li><img src="./images/drive.png" alt=""></li>
+        <div class="container2">
+          <h3>Drive</h3>
+        </div>
+      </div>
+        
+      <div class="Apps">
+        <li><img src="./images/document.png" alt=""></li>
+        <div class="container2">
+          <h3>Doc</h3>
+        </div>
+      </div>
+            
+      <div class="Apps">
+        <li><img src="./images/calendar.png" alt=""></li>
+        <div class="container2">
+          <h3>Calender</h3>
+        </div>
+      </div>
+
+      <div class="Apps">
+        <li><img src="./images/contacts.png" alt=""></li>
+        <div class="container2">
+          <h3>Contact</h3>
+        </div>
+      </div>
+
+      <div class="Apps">
+        <li><img src="./images/classroom.png" alt=""></li>
+        <div class="container2">
+          <h3>Classroom</h3>
+        </div>
+      </div>
+          
+          <div onclick="hideSideNav()"> &#9776 </div>
+        </div>
+
+    </nav>
+    
+    <div id="google-container">
+        <div id="google-logo">
+          <img src="./image.png" alt="Google">
+        </div>
+    </div>
+
+    <div id="search-container">
+        <form id="search-form">
+            <img src="./images/search.png" alt="" height="20px">
+            <input type="text" id="search-input" placeholder="Search Google or type a URL">
+             <img src="./images/voice.png" alt="" height="20px">
+             <img src="./images/image.png" alt="" height="20px">
+        </form>
+    </div>
+
+    <div class="Apps-container" >
+    <div class="card">
+      <a href="#" class="icons icon1"><img src="./images/google.png" alt=""></a>
+      <div class="container">
+        <h3>Google Search</h3>
+      </div>
+    </div>
+    <div class="card">
+      <a href="#" class="icons icon1"><img src="./images/whatapp.png" alt=""></a>
+      <div class="container">
+        <h3>Whatsapp </h3>
+      </div>
+    </div>
+    <div class="card">
+      <a href="#" class="icons icon1"><img src="./images/logo.png" alt=""></a>
+      <div class="container">
+        <h3>Jumia Nigeria</h3>
+      </div>
+    </div>
+    <div class="card">
+      <a href="#" class="icons icon1"><img src="./images/chatgpt.png" alt=""></a>
+      <div class="container">
+        <h3>Chat GPT</h3>
+      </div>
+    </div>
+    <div class="card">
+      <a href="#" class="icons icon1"><img src="./images/forms.png" alt=""></a>
+      <div class="container">
+        <h3>Forms</h3>
+      </div>
+    </div>
+    <div class="card">
+      <a href="#" class="icons icon1 plus"><img src="./images/sign.png" alt=""></a>
+      <div class="container">
+        <h3>Add shortcut</h3>
+      </div>
+    </div>
+    </div>
+
+    <script>
+        function showSideNav(){
+            document.getElementById("side_nav").style.width = "300px";
+        }
+        function hideSideNav(){
+            document.getElementById("side_nav").style.width = "0";
+        }
+    </script>
+</body>
+</html>
